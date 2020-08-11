@@ -22,6 +22,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
@@ -34,13 +35,17 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1597154466020">
+    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1597154548518">
       <screen x="0" y="23" width="1440" height="786" />
     </state>
-    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.786@0.23.1440.786" timestamp="1597154466020" />
+    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.786@0.23.1440.786" timestamp="1597154548518" />
     <state x="476" y="49" key="RollbackChangesDialog" timestamp="1597154288573">
       <screen x="0" y="23" width="1440" height="786" />
     </state>
     <state x="476" y="49" key="RollbackChangesDialog/0.23.1440.786@0.23.1440.786" timestamp="1597154288572" />
+    <state x="320" y="152" key="Vcs.Push.Dialog.v2" timestamp="1597154559112">
+      <screen x="0" y="23" width="1440" height="786" />
+    </state>
+    <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.23.1440.786@0.23.1440.786" timestamp="1597154559112" />
   </component>
 </project>
