@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9fec9e8-3b0e-4a19-8704-7a1525f89b35" name="Default Changelist" comment="" />
+    <list default="true" id="a9fec9e8-3b0e-4a19-8704-7a1525f89b35" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1fxIc1qZffXEetQBv8K7LiTA1YH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,5 +32,15 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="301" y="23" key="CommitChangelistDialog2" timestamp="1597154466020">
+      <screen x="0" y="23" width="1440" height="786" />
+    </state>
+    <state x="301" y="23" key="CommitChangelistDialog2/0.23.1440.786@0.23.1440.786" timestamp="1597154466020" />
+    <state x="476" y="49" key="RollbackChangesDialog" timestamp="1597154288573">
+      <screen x="0" y="23" width="1440" height="786" />
+    </state>
+    <state x="476" y="49" key="RollbackChangesDialog/0.23.1440.786@0.23.1440.786" timestamp="1597154288572" />
   </component>
 </project>
