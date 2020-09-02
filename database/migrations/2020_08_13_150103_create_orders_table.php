@@ -23,7 +23,7 @@ class CreateOrdersTable extends Migration
             $table->string('delivery_city')->nullable(false);
             $table->decimal('ttc_price', 8, 2);
             $table->decimal('ht_price', 8, 2);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 
