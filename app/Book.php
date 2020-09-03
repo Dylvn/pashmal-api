@@ -21,4 +21,20 @@ class Book extends Model
      * @var bool
      */
     public $timestamps = false;
+
+    /**
+     * The genres that belong to the books.
+     */
+    public function genres()
+    {
+        return $this->belongsToMany('App\Genre');
+    }
+
+    /**
+     * The orders that belong to the books.
+     */
+    public function orders()
+    {
+        return $this->belongsToMany('App\Order');
+    }
 }
