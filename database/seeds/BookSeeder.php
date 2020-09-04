@@ -11,6 +11,8 @@ class BookSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Book::class, 50)->create()->each(function ($book) {
+            $book->genres()->save(factory(App\Genre::class)->make());
+        });
     }
 }
