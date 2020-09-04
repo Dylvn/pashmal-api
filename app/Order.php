@@ -27,6 +27,6 @@ class Order extends Model
      * Get the books
      */
     public function books() {
-        return $this->hasMany('App\Book');
+        return $this->belongsToMany('App\Book');
     }
 }

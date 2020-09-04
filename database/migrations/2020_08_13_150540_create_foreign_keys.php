@@ -15,7 +15,7 @@ class CreateForeignKeys extends Migration
     {
         Schema::create('book_genre', function (Blueprint $table) {
             $table->foreignId('book_id')->constrained('books');
-            $table->foreignId('genres_id')->constrained('genres');
+            $table->foreignId('genre_id')->constrained('genres');
         });
 
         Schema::create('book_order', function (Blueprint $table) {
