@@ -16,10 +16,17 @@ class Order extends Model
     ];
 
     /**
-     * Get the users.
+     * Get the user.
      */
-    public function users()
+    public function user()
     {
-        return $this->hasMany('App\User');
+        return $this->hasOne('App\User');
+    }
+
+    /**
+     * Get the books
+     */
+    public function books() {
+        return $this->hasMany('App\Book');
     }
 }

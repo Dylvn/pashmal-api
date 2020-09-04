@@ -24,7 +24,7 @@ class User extends Model
     /**
      * The orders that belong to the users.
      */
-    public function oders()
+    public function orders()
     {
         return $this->belongsToMany('App\Order');
     }
