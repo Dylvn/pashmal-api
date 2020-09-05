@@ -1,5 +1,6 @@
 <?php
 
+use App\Genre;
 use Illuminate\Database\Seeder;
 
 class BookSeeder extends Seeder
@@ -11,8 +12,10 @@ class BookSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Book::class, 50)->create()->each(function ($book) {
-            $book->genres()->save(factory(App\Genre::class)->make());
+        $genres = Genre::all();
+
+        factory(App\Book::class, 50)->create()->each(function ($book) use ($genres) {
+            $book->genres()->save($genres->random(1)->first());
         });
     }
 }

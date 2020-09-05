@@ -1,5 +1,6 @@
 <?php
 
+use App\Book;
 use Illuminate\Database\Seeder;
 
 class OrderSeeder extends Seeder
@@ -11,8 +12,10 @@ class OrderSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Order::class, 50)->create()->each(function ($order) {
-            $order->books()->save(factory(App\Book::class)->make());
+        $books = Book::all();
+
+        factory(App\Order::class, 50)->create()->each(function ($order) use ($books) {
+            $order->books()->save($books->random(1)->first());
         });
     }
 }
