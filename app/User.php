@@ -20,4 +20,12 @@ class User extends Model
     ];
 
     public $timestamps = false;
+
+    /**
+     * The orders that belong to the users.
+     */
+    public function orders()
+    {
+        return $this->belongsToMany('App\Order');
+    }
 }

@@ -21,4 +21,12 @@ class Genre extends Model
      * @var bool
      */
     public $timestamps = false;
+
+    /**
+     * The books that belong to the genres.
+     */
+    public function books()
+    {
+        return $this->belongsToMany('App\Book');
+    }
 }
