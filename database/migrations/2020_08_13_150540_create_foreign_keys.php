@@ -24,7 +24,7 @@ class CreateForeignKeys extends Migration
         });
 
         Schema::table('orders', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained('users')->default(0);
+            $table->foreignId('user_id')->constrained('users')->default("");
         });
     }
 
