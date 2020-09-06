@@ -22,10 +22,6 @@ class CreateForeignKeys extends Migration
             $table->foreignId('book_id')->constrained('books');
             $table->foreignId('order_id')->constrained('orders');
         });
-
-        Schema::table('orders', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained('users')->default("");
-        });
     }
 
     /**
@@ -37,8 +33,5 @@ class CreateForeignKeys extends Migration
     {
         Schema::dropIfExists('book_genre');
         Schema::dropIfExists('book_order');
-        Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn(['user_id']);
-        });
     }
 }
