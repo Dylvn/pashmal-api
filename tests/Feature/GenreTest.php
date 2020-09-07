@@ -83,7 +83,7 @@ class GenreTest extends TestCase
         ;
     }
 
-    public function testDelete()
+    public function testDestroy()
     {
         $response = $this->deleteJson(route('genre_destroy', ['genre' => 21]));
 
