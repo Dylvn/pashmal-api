@@ -18,9 +18,9 @@ class Genre extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             '_links' => [
-                'self' => sprintf('/genres/%s', $this->id),
-                'modify' => sprintf('/genres/%s', $this->id),
-                'delete' => sprintf('/genres/%s', $this->id),
+                'self' => route('genre_show', ['genre' => $this->id], false),
+                'modify' => route('genre_update', ['genre' => $this->id], false),
+                'delete' => route('genre_destroy', ['genre' => $this->id], false),
             ],
             '_embedded' => [
                 'books' => $this->generateBooksUrl(),
@@ -32,6 +32,7 @@ class Genre extends JsonResource
     {
         $booksUrl = [];
         foreach ($this->resource->books as $book) {
+            // TODO modify when routes books will be created.
             $booksUrl[] = sprintf('/books/%s', $book->id);
         }
 
