@@ -2,15 +2,20 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Http\Response;
 use Tests\TestCase;
 
+/**
+ * @internal
+ * @coversNothing
+ */
 class GenreTest extends TestCase
 {
+    use DatabaseMigrations;
+
     /**
      * A basic feature test example.
-     *
-     * @return void
      */
     public function testIndex()
     {
@@ -18,8 +23,7 @@ class GenreTest extends TestCase
 
         $response = $this->getJson(route('genre_index'));
 
-        // id is 11 because the DatabaseTest create 10 genre and delete them.
-        $genreId = 11;
+        $genreId = 1;
         $response
             ->assertOk()
             ->assertJsonFragment([
@@ -27,14 +31,15 @@ class GenreTest extends TestCase
                     'self' => route('genre_show', ['genre' => $genreId], false),
                     'modify' => route('genre_update', ['genre' => $genreId], false),
                     'delete' => route('genre_destroy', ['genre' => $genreId], false),
-                ]
+                ],
             ])
         ;
     }
 
     public function testShow()
     {
-        $genreId = 15;
+        $this->seed();
+        $genreId = 1;
         $response = $this->getJson(route('genre_show', ['genre' => $genreId]));
 
         $response
@@ -56,13 +61,6 @@ class GenreTest extends TestCase
 
     public function testStoreError()
     {
-        $response = $this->postJson(route('genre_store'), ['name' => 'Aventure']);
-
-        $response
-            ->assertStatus(Response::HTTP_UNPROCESSABLE_ENTITY)
-            ->assertJsonPath('errors.name.0', 'The name has already been taken.')
-        ;
-
         $response = $this->postJson(route('genre_store'), ['name' => '']);
 
         $response
@@ -73,8 +71,11 @@ class GenreTest extends TestCase
 
     public function testUpdate()
     {
+        $this->seed();
+
         $response = $this->putJson(
-            route('genre_update', ['genre' => 17]), ['name' => 'Science-fiction']
+            route('genre_update', ['genre' => 1]),
+            ['name' => 'Science-fiction']
         );
 
         $response
@@ -85,7 +86,9 @@ class GenreTest extends TestCase
 
     public function testDestroy()
     {
-        $response = $this->deleteJson(route('genre_destroy', ['genre' => 21]));
+        $this->seed();
+
+        $response = $this->deleteJson(route('genre_destroy', ['genre' => 1]));
 
         $response
             ->assertNoContent()
