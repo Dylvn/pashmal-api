@@ -6,10 +6,6 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Http\Response;
 use Tests\TestCase;
 
-/**
- * @internal
- * @coversNothing
- */
 class GenreTest extends TestCase
 {
     use DatabaseMigrations;

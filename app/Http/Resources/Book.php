@@ -37,8 +37,7 @@ class Book extends JsonResource
     {
         $genresUrl = [];
         foreach ($this->resource->genres as $genre) {
-            // TODO modify when routes genres will be created.
-            $genresUrl[] = sprintf('/api/genres/%s', $genre->id);
+            $genresUrl[] = route('genre_show', ['genre' => $genre->id], false);
         }
 
         return $genresUrl;
@@ -49,7 +48,7 @@ class Book extends JsonResource
         $ordersUrl = [];
         foreach ($this->resource->orders as $order) {
             // TODO modify when routes orders will be created.
-            $ordersUrl[] = sprintf('/api/genres/%s', $order->id);
+            $ordersUrl[] = sprintf('/api/orders/%s', $order->id);
         }
 
         return $ordersUrl;
