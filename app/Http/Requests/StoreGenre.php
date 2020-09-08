@@ -13,6 +13,7 @@ class StoreGenre extends FormRequest
      */
     public function authorize()
     {
+        // TODO change this when auth will be completed.
         return true;
     }
 

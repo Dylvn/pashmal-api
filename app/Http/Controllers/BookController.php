@@ -52,7 +52,7 @@ class BookController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Book $book): JsonResponse
+    public function update(StoreBook $request, Book $book): JsonResponse
     {
         $book->update($request->all());
         $book->genres()->sync($request->genres);
