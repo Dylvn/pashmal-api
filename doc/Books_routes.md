@@ -1,6 +1,6 @@
 # Books
 
-## GET /books
+## GET /api/books
 
 ### **Response**
 
