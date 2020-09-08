@@ -32,8 +32,7 @@ class Genre extends JsonResource
     {
         $booksUrl = [];
         foreach ($this->resource->books as $book) {
-            // TODO modify when routes books will be created.
-            $booksUrl[] = sprintf('/books/%s', $book->id);
+            $booksUrl[] = route('book_show', ['book' => $book->id], false);
         }
 
         return $booksUrl;

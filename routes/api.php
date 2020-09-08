@@ -19,8 +19,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+/* GENRES */
 Route::get('/genres', 'GenreController@index')->name('genre_index');
 Route::get('/genres/{genre}', 'GenreController@show')->name('genre_show');
 Route::post('/genres', 'GenreController@store')->name('genre_store');
 Route::put('/genres/{genre}', 'GenreController@update')->name('genre_update');
-Route::delete('/genres/{genre}', 'GenreController@destroy')->name('genre_destroy'); 
+Route::delete('/genres/{genre}', 'GenreController@destroy')->name('genre_destroy');
+
+/* BOOKS */
+Route::get('/books', 'BookController@index')->name('book_index');
+Route::get('/books/{book}', 'BookController@show')->name('book_show');
+Route::post('/books', 'BookController@store')->name('book_store');
+Route::put('/books/{book}', 'BookController@update')->name('book_update');
+Route::delete('/books/{book}', 'BookController@destroy')->name('book_destroy');
