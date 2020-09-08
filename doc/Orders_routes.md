@@ -97,8 +97,6 @@ This route need to be authenticated and to be admin.
     "delivery_address": "Strepestraat 416",
     "delivery_postalcode": "13100",
     "delivery_city": "La Hulpe",
-    "ttc_price": 10,
-    "ht_price": 10.20,
     "user_id": 12,
     "books": [
         11, 15
@@ -158,8 +156,6 @@ This route need to be authenticated and to be admin.
     "delivery_address": "Strepestraat 416",
     "delivery_postalcode": "13100",
     "delivery_city": "La Hulpe",
-    "ttc_price": 10,
-    "ht_price": 10.20,
     "books": [
         11, 15
     ]
