@@ -1,6 +1,6 @@
 # Genres
 
-## GET /genres
+## GET /api/genres
 
 ### **Response**
 
@@ -14,19 +14,19 @@ Résponse code : ```200 OK```
         "name": "Fiction",
         "_links": {
             "self": {
-                "href": "/genres/1"
+                "href": "/api/genres/1"
             },
             "modify": {
-                "href": "/genres/1"
+                "href": "/api/genres/1"
             },
             "delete": {
-                "href": "/genres/1"
+                "href": "/api/genres/1"
             }
         },
         "_embedded": {
             "books": [
-                "/books/1",
-                "/books/54"
+                "/api/books/1",
+                "/api/books/54"
             ]
         }
     }
@@ -34,7 +34,7 @@ Résponse code : ```200 OK```
 }
 ```
 ---
-## GET /genres/{id}
+## GET /api/genres/{id}
 
 ### **Response**
 
@@ -46,25 +46,25 @@ Résponse code : ```200 OK```
         "name": "Fiction",
         "_links": {
             "self": {
-                "href": "/genres/1"
+                "href": "/api/genres/1"
             },
             "modify": {
-                "href": "/genres/1"
+                "href": "/api/genres/1"
             },
             "delete": {
-                "href": "/genres/1"
+                "href": "/api/genres/1"
             }
         },
         "_embedded": {
             "books": [
-                "/books/1",
-                "/books/54"
+                "/api/books/1",
+                "/api/books/54"
             ]
         }
     }
 ```
 ---
-## POST /genres
+## POST /api/genres
 
 This route need to be authenticated and to be admin.
 
@@ -86,19 +86,19 @@ Résponse code : ```201 Created```
     "name": "Aventure",
     "_links": {
         "self": {
-            "href": "/genres/2"
+            "href": "/api/genres/2"
         },
         "modify": {
-            "href": "/genres/2"
+            "href": "/api/genres/2"
         },
         "delete": {
-            "href": "/genres/2"
+            "href": "/api/genres/2"
         }
     }
 }
 ```
 ---
-## PUT /genres/{id}
+## PUT /api/genres/{id}
 
 This route need to be authenticated and to be admin.
 
@@ -120,25 +120,25 @@ Résponse code : ```201 Created```
         "name": "Science-fiction",
         "_links": {
             "self": {
-                "href": "/genres/1"
+                "href": "/api/genres/1"
             },
             "modify": {
-                "href": "/genres/1"
+                "href": "/api/genres/1"
             },
             "delete": {
-                "href": "/genres/1"
+                "href": "/api/genres/1"
             }
         },
         "_embedded": {
             "books": [
-                "/books/1",
-                "/books/54"
+                "/api/books/1",
+                "/api/books/54"
             ]
         }
     }
 ```
 ---
-## DELETE /genres/{id}
+## DELETE /api/genres/{id}
 
 This route need to be authenticated and to be admin.
 
