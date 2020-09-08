@@ -24,7 +24,7 @@ class CreateOrdersTable extends Migration
             $table->decimal('ttc_price', 8, 2);
             $table->decimal('ht_price', 8, 2);
             $table->timestamps();
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id')->constrained('users')->nullable(false);
         });
     }
 
