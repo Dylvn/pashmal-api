@@ -65,7 +65,7 @@ $rules = [
     ],
     'no_multiline_whitespace_around_double_arrow' => true,
     'multiline_whitespace_before_semicolons' => [
-        'strategy' => 'no_multi_line'
+        'strategy' => 'new_line_for_chained_calls'
     ],
     'no_short_bool_cast' => true,
     'no_singleline_whitespace_before_semicolons' => true,
