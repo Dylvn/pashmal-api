@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreGenre extends FormRequest
+class StoreOrder extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,7 +25,14 @@ class StoreGenre extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:genres|max:255',
+            'billing_address' => 'required|max:255',
+            'billing_postalcode' => 'required|max:5',
+            'billing_city' => 'required|max:255',
+            'delivery_address' => 'required|max:255',
+            'delivery_postalcode' => 'required|max:5',
+            'delivery_city' => 'required|max:255',
+            'user_id' => 'required|exists:users,id',
+            'books' => 'required|exists:books,id',
         ];
     }
 }

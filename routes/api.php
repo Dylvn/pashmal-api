@@ -32,3 +32,10 @@ Route::get('/books/{book}', 'BookController@show')->name('book_show');
 Route::post('/books', 'BookController@store')->name('book_store');
 Route::put('/books/{book}', 'BookController@update')->name('book_update');
 Route::delete('/books/{book}', 'BookController@destroy')->name('book_destroy');
+
+/* ORDERS */
+Route::get('/orders', 'OrderController@index')->name('order_index');
+Route::get('/orders/{order}', 'OrderController@show')->name('order_show');
+Route::post('/orders', 'OrderController@store')->name('order_store');
+Route::put('/orders/{order}', 'OrderController@update')->name('order_update');
+Route::delete('/orders/{order}', 'OrderController@destroy')->name('order_destroy');

@@ -47,8 +47,7 @@ class Book extends JsonResource
     {
         $ordersUrl = [];
         foreach ($this->resource->orders as $order) {
-            // TODO modify when routes orders will be created.
-            $ordersUrl[] = sprintf('/api/orders/%s', $order->id);
+            $ordersUrl[] = route('order_show', ['order' => $order->id]);
         }
 
         return $ordersUrl;
