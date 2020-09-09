@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreOrder;
 use App\Http\Resources\Order as ResourcesOrder;
 use App\Order;
+use App\Services\OrderManager;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
@@ -26,9 +27,16 @@ class OrderController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreOrder $request) : JsonResponse
+    public function store(StoreOrder $request, OrderManager $orderManager) : JsonResponse
     {
-        return response()->json();
+        $order = Order::create($request->all());
+        $order->books()->attach($request->books);
+        $orderManager->calculatePrices($order);
+
+        return response()->json(
+            new ResourcesOrder($order),
+            Response::HTTP_CREATED
+        );
     }
 
     /**
@@ -45,9 +53,16 @@ class OrderController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(StoreOrder $request, Order $order) : JsonResponse
+    public function update(StoreOrder $request, OrderManager $orderManager, Order $order) : JsonResponse
     {
-        return response()->json();
+        $order->update($request->all());
+        $order->books()->sync($request->books);
+        $orderManager->calculatePrices($order);
+
+        return response()->json(
+            new Resourcesorder($order),
+            Response::HTTP_CREATED
+        );
     }
 
     /**
