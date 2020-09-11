@@ -8,16 +8,24 @@ class User extends Model
 {
     /**
      * The attributes that are mass assignable.
-     * 
-     * @var array 
-    */
+     *
+     * @var array
+     */
     protected $fillable = [
-        'fname', 'lname', 'email', 'password', 'address', 'postalcode', 'city', 'reset_password_token'
+        'fname', 'lname', 'email', 'password', 'address', 'postalcode', 'city', 'reset_password_token',
     ];
 
     protected $hidden = [
-        'password', 'reset_password_token'
+        'password', 'reset_password_token',
     ];
 
     public $timestamps = false;
+
+    /**
+     * The orders that belong to the users.
+     */
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
 }

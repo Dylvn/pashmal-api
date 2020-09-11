@@ -21,9 +21,10 @@ class CreateOrdersTable extends Migration
             $table->string('delivery_address')->nullable(false);
             $table->string('delivery_postalcode')->nullable(false);
             $table->string('delivery_city')->nullable(false);
-            $table->decimal('ttc_price', 8, 2);
-            $table->decimal('ht_price', 8, 2);
-            $table->timestamp();
+            $table->decimal('ttc_price', 8, 2)->nullable(true);
+            $table->decimal('ht_price', 8, 2)->nullable(true);
+            $table->timestamps();
+            $table->foreignId('user_id')->constrained('users')->nullable(false);
         });
     }
 
