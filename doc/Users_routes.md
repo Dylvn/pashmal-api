@@ -82,7 +82,6 @@ This route need to be authenticated and to be admin.
 
 ```json
 {
-    "id": 1,
     "fname": "Patricia",
     "lname": "Bruce",
     "email": "PatriciaABruce@rhyta.com",
@@ -128,7 +127,6 @@ This route need to be authenticated and to be admin.
 
 ```json
 {
-    "id": 1,
     "fname": "Patricia",
     "lname": "Bruce",
     "email": "PatriciaABruce@rhyta.com",
