@@ -47,7 +47,7 @@ class Book extends JsonResource
     {
         $ordersUrl = [];
         foreach ($this->resource->orders as $order) {
-            $ordersUrl[] = route('order_show', ['order' => $order->id]);
+            $ordersUrl[] = route('order_show', ['order' => $order->id], false);
         }
 
         return $ordersUrl;

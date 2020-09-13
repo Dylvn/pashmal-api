@@ -39,3 +39,10 @@ Route::get('/orders/{order}', 'OrderController@show')->name('order_show');
 Route::post('/orders', 'OrderController@store')->name('order_store');
 Route::put('/orders/{order}', 'OrderController@update')->name('order_update');
 Route::delete('/orders/{order}', 'OrderController@destroy')->name('order_destroy');
+
+/* USERS */
+Route::get('/users', 'UserController@index')->name('user_index');
+Route::get('/users/{user}', 'UserController@show')->name('user_show');
+Route::post('/users', 'UserController@store')->name('user_store');
+Route::put('/users/{user}', 'UserController@update')->name('user_update');
+Route::delete('/users/{user}', 'UserController@destroy')->name('user_destroy');
