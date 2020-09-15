@@ -22,6 +22,7 @@ class User extends JsonResource
             'address' => $this->address,
             'postalcode' => $this->postalcode,
             'city' => $this->city,
+            'admin' => $this->admin,
             '_links' => [
                 'self' => route('user_show', ['user' => $this->id], false),
                 'modify' => route('user_update', ['user' => $this->id], false),

@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('address');
             $table->string('postalcode', 5);
             $table->string('city');
+            $table->boolean('admin')->default(false);
         });
     }
 

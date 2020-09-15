@@ -46,3 +46,10 @@ Route::get('/users/{user}', 'UserController@show')->name('user_show');
 Route::post('/users', 'UserController@store')->name('user_store');
 Route::put('/users/{user}', 'UserController@update')->name('user_update');
 Route::delete('/users/{user}', 'UserController@destroy')->name('user_destroy');
+
+/* AUTH */
+Route::post('/auth/register', 'AuthController@register')->name('auth_register');
+Route::post('/auth/login', 'AuthController@login')->name('auth_login');
+Route::post('/auth/refresh', 'AuthController@refresh')->name('auth_refresh');
+Route::get('/auth/profile', 'AuthController@profile')->name('auth_profile');
+Route::post('/auth/logout', 'AuthController@logout')->name('auth_logout');
